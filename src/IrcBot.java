@@ -6,9 +6,13 @@ import org.jibble.pircbot.PircBot;
 public class IrcBot extends PircBot {
 
     Game g;
+    String network;
+    String chan;
 
-    IrcBot(){
-        setName("CAHBot");
+    IrcBot(String network, String chan, String nick){
+        setName(nick);
+        this.network = network;
+        this.chan = chan;
         setLogin("CAHBot");
     }
 

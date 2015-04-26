@@ -17,7 +17,7 @@ public class Game {
 
     boolean playing = false;
     Deck deck = new Deck();
-    String chan = "#CardsAgainstHumanity";
+    String chan;
     Player judge;
     int judgeIndex;
     IrcBot bot;
@@ -25,8 +25,9 @@ public class Game {
     ArrayList<String> playerStrings = new ArrayList<String>();
     HashMap<String, Player> players = new HashMap<String, Player>();
     Card blackCard;
-    Game(IrcBot bot){
+    Game(IrcBot bot, String chan){
         this.bot = bot;
+        this.chan = chan;
     }
     //create a new game - clears all containers and initializes the deck
     void newGame(String nick){
